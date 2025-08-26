@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohak Mohak — Security & Automation Projects</title>
+  <meta name="description" content="A portfolio of security, automation, and tooling projects by Mohak Mohak." />
+  <meta property="og:title" content="Mohak Mohak — Security & Automation Projects" />
+  <meta property="og:description" content="Dayforce ↔ Azure Automation and other cybersecurity tools, scripts, and write-ups." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #8b5cf6;
+      --accent-2: #22d3ee;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial; color: var(--text); background: radial-gradient(1200px 800px at 10% -20%, rgba(139,92,246,.15), transparent 60%), radial-gradient(1000px 700px at 100% 0%, rgba(34,211,238,.18), transparent 60%), var(--bg); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 80px; }
+
+    header { position: sticky; top: 0; backdrop-filter: blur(6px); background: linear-gradient(to bottom, rgba(11,18,32,.85), rgba(11,18,32,.35)); border-bottom: 1px solid rgba(148,163,184,.15); z-index: 20; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+    .brand { display:flex; gap:12px; align-items:center; font-weight:700; }
+    .brand .logo { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display:grid; place-items:center; font-weight:900; }
+    .brand .logo span { filter: drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
+    nav a { padding: 10px 14px; border-radius: 10px; color: var(--muted); }
+    nav a:hover { background: rgba(148,163,184,.12); color: var(--text); }
+
+    .hero { padding: 72px 0 30px; }
+    .hero h1 { font-size: clamp(28px, 3.2vw + 12px, 56px); margin: 0 0 10px; }
+    .hero p { color: var(--muted); font-size: clamp(16px, 1.2vw + 12px, 20px); max-width: 780px; }
+    .cta { display:flex; gap:12px; margin-top:22px; flex-wrap:wrap; }
+    .btn { display:inline-flex; gap:10px; align-items:center; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.25); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); cursor: pointer; }
+    .btn.primary { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b1220; font-weight: 700; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+
+    .kpis { display:grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 14px; margin-top: 28px; }
+    .kpi { background: rgba(15,23,42,.6); border: 1px solid rgba(148,163,184,.15); border-radius: var(--radius); padding: 14px 16px; }
+    .kpi small { color: var(--muted); }
+
+    section { margin-top: 50px; }
+    .section-title { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .section-title h2 { margin:0; font-size: 24px; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; margin-top: 16px; }
+
+    .card { position: relative; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(148,163,184,.18); border-radius: var(--radius); padding: 18px; overflow: hidden; transition: transform .2s ease, border-color .2s ease; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(139,92,246,.55); }
+    .card .badges { display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 10px; }
+    .badge { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,.25); color: var(--muted); font-size: 12px; }
+    .list { margin: 8px 0 0 0; padding-left: 18px; }
+    .links { display:flex; gap:10px; flex-wrap: wrap; margin-top: 12px; }
+    .subtle { color: var(--muted); }
+
+    footer { margin-top: 60px; padding: 30px 0 60px; color: var(--muted); }
+    .pill { display:inline-block; font-size: 12px; letter-spacing:.3px; padding: 6px 10px; border:1px solid rgba(148,163,184,.25); border-radius:999px; }
+    .sprinkle { position:absolute; inset:-1px; pointer-events:none; background:
+      radial-gradient(400px 120px at 10% -20%, rgba(139,92,246,.25), transparent 60%),
+      radial-gradient(300px 160px at 100% 0%, rgba(34,211,238,.22), transparent 60%); opacity:.6; }
+    .sr { position:absolute; left:-9999px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><span>MM</span></div>
+        <div>
+          <div>Mohak Mohak</div>
+          <small class="subtle">Security • Automation • Red Team Tools</small>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="home">
+      <h1>Building secure systems and smart automations.</h1>
+      <p>I design and ship hands-on projects across cybersecurity, DevSecOps, and IT automation. Below is a growing collection of tools, scripts, and write-ups. Every tile links to code or a case study.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Explore Projects →</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Résumé</a>
+      </div>
+
+      <div class="kpis" role="list" aria-label="Highlights">
+        <div class="kpi">
+          <div><strong>Azure • Microsoft Graph</strong></div>
+          <small>Automation, identity, CA policies</small>
+        </div>
+        <div class="kpi">
+          <div><strong>Python • PowerShell</strong></div>
+          <small>Scripting, APIs, CI/CD</small>
+        </div>
+        <div class="kpi">
+          <div><strong>Security</strong></div>
+          <small>Red team tooling & hardening</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <span class="pill">Last updated 2025</span>
+      </div>
+
+      <div class="projects">
+        <!-- Project 1: Dayforce ↔ Azure Automation -->
+        <article class="card" aria-labelledby="p1-title">
+          <div class="sprinkle" aria-hidden="true"></div>
+          <h3 id="p1-title">Dayforce ↔ Azure Automation</h3>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Microsoft Graph</span>
+            <span class="badge">Azure Automation</span>
+            <span class="badge">Dayforce API</span>
+          </div>
+          <p class="subtle">A production-grade sync that treats Dayforce as the source of truth for identity, eliminating manual onboarding/offboarding work and flagging gaps automatically.</p>
+          <ul class="list">
+            <li><strong>Auto-provision on hire:</strong> When HR completes a hire in Dayforce, the workflow can create the Azure account automatically.</li>
+            <li><strong>Continuous user updates:</strong> Keeps title, department, manager, addresses, and other attributes aligned with Dayforce.</li>
+            <li><strong>Audit & offboarding:</strong> If a user is terminated or on leave in Dayforce, Azure is disabled and <em>alerts</em> are sent; discrepancies are reported for IT follow-up.</li>
+            <li><strong>Safety rails:</strong> Excludes specific groups from actions; uses report-only modes before enforcing changes.</li>
+          </ul>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noopener">View Code</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Case Study</a>
+          </div>
+        </article>
+
+        <!-- Placeholder tiles for future projects -->
+        <article class="card" aria-labelledby="p2-title">
+          <div class="sprinkle" aria-hidden="true"></div>
+          <h3 id="p2-title">Red Team Tool — Coming Soon</h3>
+          <div class="badges">
+            <span class="badge">OPSEC</span>
+            <span class="badge">Python</span>
+            <span class="badge">CLI</span>
+          </div>
+          <p class="subtle">Space reserved for a lightweight operator tool (enumeration, payload staging, or phishing infra). Stay tuned.</p>
+          <div class="links">
+            <a class="btn" href="#contact">Get notified</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="p3-title">
+          <div class="sprinkle" aria-hidden="true"></div>
+          <h3 id="p3-title">Security Automation — Coming Soon</h3>
+          <div class="badges">
+            <span class="badge">PowerShell</span>
+            <span class="badge">SIEM</span>
+            <span class="badge">Playbooks</span>
+          </div>
+          <p class="subtle">A library of scripts and playbooks to harden endpoints, validate controls, and orchestrate response.</p>
+          <div class="links">
+            <a class="btn" href="#contact">Get notified</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About</h2>
+      </div>
+      <p class="subtle">I'm an IT Support Specialist with a cyber background, focused on building secure automations. Recent work includes Dayforce ↔ Azure identity syncs, CA policy improvements, and network hardening. I like clean code, measurable results, and a good threat model.</p>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+      <p class="subtle">Want a quick walkthrough of any project? Reach out.</p>
+      <div class="links">
+        <a class="btn" href="mailto:mohak.mohak@irent.com">Email</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 Mohak Mohak. Built with HTML/CSS. No frameworks.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Light sparkle on hover for cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mx', x + 'px');
+        card.style.setProperty('--my', y + 'px');
+      });
+    });
+  </script>
+</body>
+</html>
