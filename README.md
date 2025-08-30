@@ -17,7 +17,6 @@ A Python automation project that connects Dayforce (HR system) with Azure Active
 - 🚪 **User Offboarding**: Automatically disables or removes Azure users when they’re terminated in Dayforce, notifying IT if issues arise.
 
 🔗 [🌐 Project Page](https://Mohak4.github.io/Mohak_Portfolio)  
-💻 [View Source Code](https://github.com/Mohak4/dayforce-azure-project)
 
 ---
 
