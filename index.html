@@ -129,10 +129,11 @@
           </div>
           <p class="subtle">A production-grade sync that treats Dayforce as the source of truth for identity, eliminating manual onboarding/offboarding work and flagging gaps automatically.</p>
           <ul class="list">
-            <li><strong>Auto-provision on hire:</strong> When HR completes a hire in Dayforce, the workflow can create the Azure account automatically.</li>
-            <li><strong>Continuous user updates:</strong> Keeps title, department, manager, addresses, and other attributes aligned with Dayforce.</li>
-            <li><strong>Audit & offboarding:</strong> If a user is terminated or on leave in Dayforce, Azure is disabled and <em>alerts</em> are sent; discrepancies are reported for IT follow-up.</li>
-            <li><strong>Safety rails:</strong> Excludes specific groups from actions; uses report-only modes before enforcing changes.</li>
+            <li><strong>Automated provisioning:</strong> Hire events in Dayforce trigger Azure AD account creation with role-based groups and licenses applied.</li>
+            <li><strong>Continuous sync:</strong> Job title, department, manager, and location are kept aligned between Dayforce and Azure.</li>
+            <li><strong>Enforced offboarding:</strong> Termination or leave status in Dayforce immediately disables the Azure account, closing security gaps and enforcing least privilege.</li>
+            <li><strong>Auditable actions:</strong> Every create, update, and disable is logged with timestamps. Mismatches are flagged for IT to review.</li>
+            <li><strong>Safety controls:</strong> Exclusion lists prevent lockouts of sensitive or admin accounts.</li>
           </ul>
           <div class="links">
             <a class="btn" href="#" target="_blank" rel="noopener">View Code</a>
